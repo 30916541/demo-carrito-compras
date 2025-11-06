@@ -26,6 +26,7 @@ export default class Cl_vTienda extends Cl_vGeneral {
         });
     }
     agregarProducto() {
+        var _a;
         let nombre = prompt("Ingrese el nombre del producto:");
         if (!nombre)
             return;
@@ -35,7 +36,7 @@ export default class Cl_vTienda extends Cl_vGeneral {
         let precio = parseFloat(prompt("Ingrese el precio:") || "0");
         if (!precio)
             return;
-        let envio = prompt("Ingrese el envio:");
+        let envio = (_a = prompt("Ingrese el envio:")) === null || _a === void 0 ? void 0 : _a.toLocaleUpperCase();
         if (!envio)
             return;
         this.controlador.agregarProducto({

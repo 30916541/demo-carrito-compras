@@ -37,7 +37,7 @@ export default class Cl_vTienda extends Cl_vGeneral {
         if(!cantidad) return;
         let precio = parseFloat(prompt("Ingrese el precio:") || "0");
         if(!precio) return;
-        let envio = prompt("Ingrese el envio:");
+        let envio = prompt("Ingrese el envio:")?.toLocaleUpperCase();
         if(!envio) return;
         this.controlador!.agregarProducto({
             productoData: {

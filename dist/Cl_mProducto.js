@@ -33,6 +33,12 @@ export default class Cl_mProducto {
     get envio() {
         return this._envio;
     }
+    error() {
+        if (this.envio !== "SI" && this.envio !== "NO") {
+            return 'El envio debe ser "Si" o "No"';
+        }
+        return false;
+    }
     toJSON() {
         return {
             nombre: this.nombre,

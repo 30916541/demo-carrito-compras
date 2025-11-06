@@ -8,6 +8,10 @@ export default class Cl_mTienda {
             callback("El producto ya existe");
             return;
         }
+        if (producto.error()) {
+            callback(`${producto.error()}`);
+            return;
+        }
         this.productos.push(producto);
         callback(false);
     }

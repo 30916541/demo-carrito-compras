@@ -60,6 +60,13 @@ export default class Cl_mProducto {
         return this._envio;
     }
 
+    error() : string | false {
+        if (this.envio !== "SI" && this.envio !== "NO") {
+            return 'El envio debe ser "Si" o "No"';
+        }
+        return false;
+    } 
+
     toJSON(): iProducto {
         return {
             nombre: this.nombre,
