@@ -10,7 +10,7 @@ export default class Cl_mProducto {
         this._envio = envio;
     }
     set nombre(nombre) {
-        this._nombre = nombre;
+        this._nombre = nombre.trim().toLocaleUpperCase();
     }
     get nombre() {
         return this._nombre;

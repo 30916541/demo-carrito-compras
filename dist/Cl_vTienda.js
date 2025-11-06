@@ -18,7 +18,7 @@ export default class Cl_vTienda extends Cl_vGeneral {
             return;
         productos.forEach((productos) => {
             this.divProductosRegistrados.innerHTML += `<tr>
-                <td>${productos.nombre}</td>
+                <td>${productos.nombre.toLocaleUpperCase()}</td>
                 <td>${productos.cantidad}</td>
                 <td>${productos.precio}$</td>
                 <td>${productos.envio.toLocaleUpperCase()}</td>
