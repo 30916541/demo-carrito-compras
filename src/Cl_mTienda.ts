@@ -25,6 +25,7 @@ export default class Cl_mTienda {
         }
 
         this.productos.push(producto);
+        localStorage.setItem("productos", JSON.stringify(this.listarProductos()));
         callback(false);
     }
 
