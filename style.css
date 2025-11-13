@@ -1,86 +1,99 @@
-section {
-    border: 3px solid rgb(0, 0, 0);
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    width: 300px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-label {
-    margin-top: 5px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 h3 {
-    color: white;
-    background-color: rgb(0, 0, 0);
-    padding: 3px;
-    border-radius: 10px;
-    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: normal;
 }
 
-h4 {
-    margin-top: 1px;
-    margin-bottom: 0px;
-    font-style: italic;
-    font-weight: normal;
-    color: seagreen;
+section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
 }
 
 button {
-    margin-top: 10px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #222;
 }
 
-input {
-    width: 80px;
+button:hover {
+    background-color: #222;
+    transition: transform 180ms cubic-bezier(.2,.8,.2,1), box-shadow 180ms cubic-bezier(.2,.8,.2,1);
+    transform: scale(1.03);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+    will-change: transform, box-shadow;
 }
 
-table,
-th,
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+thead {
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ddd;
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    font-weight: normal;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+}
+
 td {
-    border: 1px solid black;
-    text-align: center;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
 }
 
-#agenda {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-#ficha {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-top: 10px;
+tbody tr:nth-child(odd) {
+    background-color: #fff;
 }
 
-#mainForm {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
+tbody tr:nth-child(odd):hover {
+    background-color: #d4d4d4;
+    transition: background-color 150ms ease, transform 120ms ease;
+    transform: translateX(2px);
 }
 
-.colCurrency {
-    text-align: right;
-    padding-left: 10px;
+tbody tr:nth-child(even):hover {
+    background-color: #eeeeee;
+    transition: background-color 150ms ease, transform 120ms ease;
+    transform: translateX(2px);
 }
 
-.colNumber {
-    column-width: 50px;
+table:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+    transition: background-color 150ms ease;
 }
 
-.divSalida {
-    display: flex;
-    flex-direction: column;
-}
-
-.spanInfo {
-    font-size: 10px;
-    font-style: italic;
-    color: rgb(0, 0, 0);
+#carrito_divProductosRegistrados td {
+    color: #333;
 }
